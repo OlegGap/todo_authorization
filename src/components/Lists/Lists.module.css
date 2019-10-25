@@ -1,0 +1,36 @@
+.listsContainer {
+  width: 98%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+}
+.currentList {
+  display: flex;
+  flex-direction: row;
+  margin: 20px 0 0 10px;
+}
+.addNewListContainer {
+  display: flex;
+  height: 500px;
+  width: 200px;
+  justify-content: center;
+  align-items: center;
+}
+.addNewList {
+  width: 50px;
+  height: 50px;
+  font-size: 50px;
+  line-height: 44px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.1);
+  color: #e9a06f;
+  border: 3px solid #e8a87c;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+.addNewList:hover {
+  color: #ee9052;
+  background: rgba(0, 0, 0, 0.2);
+  border: 3px solid #e99d6b;
+}

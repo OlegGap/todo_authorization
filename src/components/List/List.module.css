@@ -1,0 +1,23 @@
+.listContainer {
+  width: 200px;
+  height: fit-content;
+  padding: 0 5px;
+  margin: 0 5px;
+  background-color: rgb(240, 240, 240);
+  border: 1px solid #85dcbb;
+  border-radius: 5px;
+  font-family: 'Open Sans';
+}
+.listTitle {
+  font-size: 25px;
+  text-transform: uppercase;
+  font-family: 'Open Sans';
+  color: #2c2e2a;
+}
+.list {
+  list-style: none;
+}
+.addNewCard {
+  height: 40px;
+  color: #36574a;
+}
