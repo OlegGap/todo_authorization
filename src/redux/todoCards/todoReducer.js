@@ -47,7 +47,7 @@ const errorReducer = (state = null, { type, payload }) => {
 };
 
 export default combineReducers({
-  lists: cardsReducer,
+  list: cardsReducer,
   loading: loadingReducer,
   error: errorReducer,
 });

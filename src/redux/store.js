@@ -2,11 +2,11 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import ReduxThunk from 'redux-thunk';
 import todoCardReducer from './todoCards/todoReducer';
-import profileReducer from './profile/profileReducer';
+import sesionReducer from './sesion/sesionReducer';
 
 const rootReducer = combineReducers({
   todo: todoCardReducer,
-  profile: profileReducer,
+  sesion: sesionReducer,
 });
 
 const middleware = [ReduxThunk];

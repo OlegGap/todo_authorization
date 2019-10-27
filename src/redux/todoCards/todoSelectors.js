@@ -2,6 +2,6 @@ export const getLoading = state => state.todo.loading;
 
 export const getError = state => state.todo.error;
 
-export const getProfile = state => state.profile.profile.profile;
+export const getCards = state => state.todo.list.tasks;
 
-export const getLists = state => state.todo.lists;
+export const getTasksCount = state => state.todo.list.total_task_count;

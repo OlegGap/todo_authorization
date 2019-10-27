@@ -1,33 +1,19 @@
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 import styles from './Card.module.css';
 import cutString from '../../utils/cutString.js';
-import DetailsCard from '../DetailsCard/DetailsCard';
 
-const ListContainer = ({ cardData }) => {
-  const cardRef = useRef(null);
-  useEffect(() => {
-    // console.log('basic', cardRef);
-  }, []);
-  return (
-    <>
-      <li className={styles.cardContainer} ref={cardRef}>
-        <div className={styles.cardContent}>
-          <h4 className={styles.cardTitle}>{cutString(cardData.title, 50)}</h4>
-          <div className={styles.shortInfo}>
-            <div className={styles.subtasks} />
-            <div className={styles.deadline}>
-              {cardData.deadline ? `DL:${cardData.deadline}` : null}
-            </div>
-          </div>
-        </div>
-        <div
-          className={styles.cardMark}
-          style={{ backgroundColor: `${cardData.mark}` }}
-        />
-      </li>
-      <DetailsCard cardRef={cardRef} />
-    </>
-  );
-};
+const ListContainer = ({ cardData }) => (
+  <>
+    <li className={styles.cardContainer}>
+      <h4 className={styles.cardTitle}>
+        Title: {cutString(cardData.username, 20)}
+      </h4>
+      <div className={styles.content}>
+        <h4>{cutString(cardData.text, 150)}</h4>
+        <h4 className={styles.contentEmail}>Email: {cardData.email}</h4>
+      </div>
+    </li>
+  </>
+);
 
 export default ListContainer;

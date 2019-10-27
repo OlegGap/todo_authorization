@@ -4,39 +4,26 @@ import 'react-toastify/dist/ReactToastify.css';
 import './styles.css';
 import PropTypes from 'prop-types';
 import Header from '../Header/Header';
-import Lists from '../Lists/ListsContainer.js';
+import List from '../List/List';
+import Pagination from '../Pagination/Pagination';
 
-// type AppProps = {
-//   loading: boolean;
-//   error: boolean;
-//   profile: string;
-//   fetchCards: any;
-//   fetchProfile: any;
-// };
-
-const App = ({ fetchCards, fetchProfile, profile }) => {
+const App = ({ fetchList, cards, tasksCount }) => {
   useEffect(() => {
-    fetchCards();
-    fetchProfile();
+    fetchList(2);
   }, []);
 
   return (
     <>
-      <Header profile={profile} />
-      <Lists />
+      <Header />
+      {cards && <List listCards={cards} />}
+      <Pagination pageCount={+tasksCount} fetchList={fetchList} />
       <ToastContainer />
     </>
   );
 };
 
-App.defaultProps = {
-  profile: { name: '...', surname: '...' },
-};
-
 App.propTypes = {
-  fetchCards: PropTypes.func.isRequired,
-  fetchProfile: PropTypes.func.isRequired,
-  profile: PropTypes.objectOf(PropTypes.any),
+  fetchList: PropTypes.func.isRequired,
 };
 
 export default App;

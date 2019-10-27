@@ -12,16 +12,16 @@ export const Type = {
   ADD_LIST: 'ADD_LIST',
 };
 
-export const fetchCardsStart = () => ({
+export const fetchListStart = () => ({
   type: Type.FETCH_CARDS_START,
 });
 
-export const fetchCardsSuccess = cards => ({
+export const fetchListSuccess = cards => ({
   type: Type.FETCH_CARDS_SUCCESS,
   payload: { cards },
 });
 
-export const fetchCardsError = error => ({
+export const fetchListError = error => ({
   type: Type.FETCH_CARDS_ERROR,
   payload: { error },
 });

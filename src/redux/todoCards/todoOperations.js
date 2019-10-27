@@ -1,29 +1,34 @@
 import axios from 'axios';
 import {
-  fetchCardsStart,
-  fetchCardsSuccess,
-  fetchCardsError,
+  fetchListStart,
+  fetchListSuccess,
+  fetchListError,
   addCardStart,
   addCardSuccess,
   addCardError,
 } from './todoActions.js';
 
-export const fetchCards = () => dispatch => {
-  dispatch(fetchCardsStart());
+export const fetchList = page => dispatch => {
+  dispatch(fetchListStart());
   axios
-    .get('http://localhost:8086/lists/')
+    .get(
+      `https://uxcandy.com/~shapoval/test-task-backend/v2/?developer=Oleg&page=${page}`,
+    )
     .then(response => {
-      dispatch(fetchCardsSuccess(response.data));
+      return dispatch(fetchListSuccess(response.data.message));
     })
     .catch(error => {
-      dispatch(fetchCardsError(error));
+      dispatch(fetchListError(error));
     });
 };
 
 export const addCard = data => dispatch => {
   dispatch(addCardStart());
   axios
-    .post('http://localhost:8086/lists/', data)
+    .post(
+      'https://uxcandy.com/~shapoval/test-task-backend/v2/?developer=Name',
+      data,
+    )
     .then(response => {
       dispatch(addCardSuccess(response.data));
     })

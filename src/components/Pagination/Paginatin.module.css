@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+  margin: 0 auto;
+  list-style: none;
+  background-color: rgb(188, 199, 194);
+  border-radius: 10px;
+  padding: 10px;
+}
+.container li {
+  padding: 3px;
+  cursor: pointer;
+}
+.active {
+  background-color: rgb(211, 233, 223);
+  padding: 3px;
+  border-radius: 3px;
+}

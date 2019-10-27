@@ -1,16 +1,13 @@
 import React from 'react';
 import styles from './Header.module.css';
+import Login from './Login/LoginContainer.js';
 
-// export interface Header {
-//   profile: string;
-// }
-
-const Header = ({ profile }) => {
+const Header = () => {
   return (
     <div className={styles.headerContainer}>
       <div className={styles.headerWrapper}>
         <div>TODO</div>
-        <div>{profile && profile.name}</div>
+        <Login />
       </div>
     </div>
   );
