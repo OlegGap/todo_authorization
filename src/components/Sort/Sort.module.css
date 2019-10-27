@@ -1,0 +1,16 @@
+.sortContainer {
+  margin: 0 auto;
+  display: flex;
+  width: 400px;
+  height: 100px;
+  justify-content: space-between;
+  align-items: center;
+}
+.sortTitle {
+  font-size: 28px;
+}
+.sortField,
+.sortDirection {
+  width: 150px;
+  height: 40px;
+}

@@ -1,6 +1,6 @@
-export const getLoading = state => state.todo.loading;
+export const getLoadingCards = state => state.todo.loading;
 
-export const getError = state => state.todo.error;
+export const getErrorCards = state => state.todo.error;
 
 export const getCards = state => state.todo.list.tasks;
 

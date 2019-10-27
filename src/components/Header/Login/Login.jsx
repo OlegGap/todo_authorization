@@ -1,15 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Popup from 'reactjs-popup';
+import { toast } from 'react-toastify';
 import styles from './Login.module.css';
 
-const Login = ({ authenticated, error, loginRequest }) => {
+const Login = ({ authenticated, error, login }) => {
+  useEffect(() => {
+    if (authenticated) {
+      toast.success('You are logged in!', {
+        position: toast.POSITION.BOTTOM_LEFT,
+      });
+    }
+  }, [authenticated]);
   const handleLogin = evt => {
     const currentLogin = evt.target.querySelector('input[name="login"]').value;
     const currentPassword = evt.target.querySelector('input[name="password"]')
       .value;
 
     evt.preventDefault();
-    loginRequest({
+    login({
       username: currentLogin,
       password: currentPassword,
     });
@@ -18,9 +26,9 @@ const Login = ({ authenticated, error, loginRequest }) => {
     <Popup
       className={styles.loginWrapper}
       trigger={
-        <div className={styles.loginButton}>
-          {authenticated ? 'LOG OUT' : 'LOG IN'}
-        </div>
+        <button type="button" className={styles.loginButton}>
+          LOG IN
+        </button>
       }
       modal
     >
@@ -49,7 +57,7 @@ const Login = ({ authenticated, error, loginRequest }) => {
             <div className={styles.error}>{error.password}</div>
           )}
           <button type="submit" className={styles.loginButtonSubmit}>
-            Submit
+            Login
           </button>
           {authenticated ? close() : null}
         </form>

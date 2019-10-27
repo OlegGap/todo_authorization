@@ -7,7 +7,22 @@
   width: 90%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   font-size: 40px;
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   line-height: 70px;
+}
+.sesionButtons {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logoutButton {
+  cursor: pointer;
+  border-radius: 20px;
+  font-size: 26px;
+  line-height: 25px;
+  padding: 0 10px;
+  height: 50px;
 }

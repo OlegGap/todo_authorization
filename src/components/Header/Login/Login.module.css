@@ -1,5 +1,10 @@
 .loginButton {
   cursor: pointer;
+  border-radius: 20px;
+  font-size: 25px;
+  line-height: 25px;
+  padding: 0 10px;
+  height: 50px;
 }
 .loginWrapper {
   width: 900px;
@@ -20,7 +25,7 @@
   width: 100%;
   max-width: 420px;
   height: 30px;
-  background-color: rgb(206, 206, 171);
+  background-color: #efe2ba;
   padding-left: 10px;
 }
 .loginButtonSubmit {

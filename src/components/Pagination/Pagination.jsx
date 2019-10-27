@@ -4,7 +4,7 @@ import styles from './Paginatin.module.css';
 
 const Pagionation = ({ fetchList, pageCount }) => {
   const handlePageClick = data => {
-    fetchList(data.selected);
+    fetchList(data.selected + 1);
   };
   return (
     <ReactPaginate

@@ -18,3 +18,7 @@ export const loginError = error => ({
   type: ActionType.LOGIN_ERROR,
   payload: { error },
 });
+
+export const logoutRequest = () => ({
+  type: ActionType.LOGOUT,
+});

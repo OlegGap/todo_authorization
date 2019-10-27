@@ -1,13 +1,32 @@
 import React from 'react';
 import styles from './Header.module.css';
-import Login from './Login/LoginContainer.js';
+import Login from './Login/Login';
+import AddCard from './AddCard/AddCardContainer.js';
 
-const Header = () => {
+const Header = ({ logout, login, errorLogin, authenticated }) => {
   return (
     <div className={styles.headerContainer}>
       <div className={styles.headerWrapper}>
         <div>TODO</div>
-        <Login />
+        <div className={styles.sesionButtons}>
+          <AddCard />
+          {!authenticated && (
+            <Login
+              authenticated={authenticated}
+              login={login}
+              error={errorLogin}
+            />
+          )}
+          {authenticated && (
+            <button
+              type="button"
+              onClick={logout}
+              className={styles.logoutButtons}
+            >
+              LOG OUT
+            </button>
+          )}
+        </div>
       </div>
     </div>
   );
