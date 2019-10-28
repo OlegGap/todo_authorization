@@ -7,9 +7,8 @@ export const Type = {
   ADD_CARD_ERROR: 'ADD_CARD_ERROR',
   ADD_CARD_SUCCESS: 'ADD_CARD_SUCCESS',
 
-  MODIFY_CARD: 'MODIFY_CARD_SUCCESS',
+  MODIFY_CARD_SUCCESS: 'MODIFY_CARD_SUCCESS',
   REMOVE_CARD: 'REMOVE_CARD_SUCCESS',
-  ADD_LIST: 'ADD_LIST',
 };
 
 export const fetchListStart = () => ({
@@ -38,4 +37,9 @@ export const addCardSuccess = cards => ({
 export const addCardError = error => ({
   type: Type.ADD_CARD_ERROR,
   payload: { error },
+});
+
+export const modifyCardSuccess = card => ({
+  type: Type.MODIFY_CARD_SUCCESS,
+  payload: { card },
 });

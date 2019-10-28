@@ -1,0 +1,36 @@
+.modifyButton {
+  width: 100px;
+  height: 20px;
+  background-color: rgb(0, 102, 255);
+  border-radius: 10px;
+}
+.wrapper {
+  width: 900px;
+  height: fit-content;
+  background: red;
+}
+.form {
+  width: 90%;
+  height: 220px;
+  margin: 0 auto;
+  font-size: 26px;
+  line-height: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.modifyText {
+  width: 100%;
+  max-width: 420px;
+  background-color: #efe2ba;
+  padding-left: 10px;
+  height: 100px;
+  font-size: 16px;
+  margin-top: 10px;
+}
+.modifyButtonConfirm {
+  margin: 20px 0;
+  padding: 10px 0;
+  width: 80px;
+  height: 40px;
+}

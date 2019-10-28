@@ -21,7 +21,7 @@ const Header = ({ logout, login, errorLogin, authenticated }) => {
             <button
               type="button"
               onClick={logout}
-              className={styles.logoutButtons}
+              className={styles.logoutButton}
             >
               LOG OUT
             </button>

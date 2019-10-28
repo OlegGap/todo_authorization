@@ -4,6 +4,7 @@ import { ActionType } from './sesionActions';
 const authenticated = (state = false, { type }) => {
   switch (type) {
     case ActionType.LOGIN_SUCCESS:
+    case ActionType.AUTHENTICATED:
       return true;
 
     case ActionType.LOGOUT:
@@ -18,6 +19,9 @@ const token = (state = null, { type, payload }) => {
   switch (type) {
     case ActionType.LOGIN_SUCCESS:
       return payload.profile.message.token;
+
+    case ActionType.AUTHENTICATED:
+      return payload.token;
 
     case ActionType.LOGOUT:
       return null;

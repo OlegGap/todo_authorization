@@ -12,9 +12,6 @@ const cardsReducer = (state = [], { type, payload }) => {
     case Type.ADD_CARD_SUCCESS:
       return [...state, payload.cards];
 
-    // case Type.MODIFY_CARD_SUCCESS:
-    //   return [...state, payload.post];
-
     default:
       return state;
   }

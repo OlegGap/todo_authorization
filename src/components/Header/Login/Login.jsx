@@ -11,12 +11,13 @@ const Login = ({ authenticated, error, login }) => {
       });
     }
   }, [authenticated]);
+
   const handleLogin = evt => {
+    evt.preventDefault();
+
     const currentLogin = evt.target.querySelector('input[name="login"]').value;
     const currentPassword = evt.target.querySelector('input[name="password"]')
       .value;
-
-    evt.preventDefault();
     login({
       username: currentLogin,
       password: currentPassword,

@@ -1,17 +1,14 @@
 import { connect } from 'react-redux';
 import * as todoOperations from '../../redux/todoCards/todoOperations';
-import { logout, login } from '../../redux/sesion/sesionOperations';
-
 import {
-  getLoadingCards,
-  getErrorCards,
-  getCards,
-  getTasksCount,
-} from '../../redux/todoCards/todoSelectors';
+  logout,
+  login,
+  fetchAuthenticated,
+} from '../../redux/sesion/sesionOperations';
+import { getCards, getTasksCount } from '../../redux/todoCards/todoSelectors';
 import {
   getAuthenticated,
   getErrorLogin,
-  getToken,
 } from '../../redux/sesion/sesionSelectors';
 import App from './App.jsx';
 
@@ -19,16 +16,15 @@ const mapStateToProps = state => ({
   cards: getCards(state),
   tasksCount: getTasksCount(state),
   authenticated: getAuthenticated(state),
-  token: getToken(state),
-  loadingCards: getLoadingCards(state),
-  errorCards: getErrorCards(state),
   errorLogin: getErrorLogin(state),
 });
 
 const mapDispatchToProps = {
   fetchList: todoOperations.fetchList,
+  modifyCard: todoOperations.modifyCard,
   logout,
   login,
+  fetchAuthenticated,
 };
 
 export default connect(

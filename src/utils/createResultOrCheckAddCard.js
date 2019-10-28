@@ -7,7 +7,7 @@ const getInputValue = (target, name) =>
 export const createResultAddCard = target => ({
   username: getInputValue(target, 'name'),
   email: getInputValue(target, 'email'),
-  description: getInputValue(target, 'description'),
+  text: getInputValue(target, 'text'),
   status: 0,
 });
 
@@ -30,5 +30,16 @@ export const validationForm = target => {
     });
     return false;
   }
+  if (
+    !new RegExp(
+      '^([a-z0-9_-]+.)*[a-z0-9_-]+@[a-z0-9_-]+(.[a-z0-9_-]+)*.[a-z]{2,6}$',
+    ).test(getInputValue(target, 'email'))
+  ) {
+    toast.warn('Input valid email, pls!', {
+      position: toast.POSITION.BOTTOM_LEFT,
+    });
+    return false;
+  }
+
   return true;
 };

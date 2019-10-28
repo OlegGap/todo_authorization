@@ -3,6 +3,7 @@ export const ActionType = {
   LOGIN_SUCCESS: 'LOGIN_SUCCESS',
   LOGIN_ERROR: 'LOGIN_ERROR',
   LOGOUT: 'LOGOUT',
+  AUTHENTICATED: 'AUTHENTICATED',
 };
 
 export const loginRequest = () => ({
@@ -21,4 +22,9 @@ export const loginError = error => ({
 
 export const logoutRequest = () => ({
   type: ActionType.LOGOUT,
+});
+
+export const authenticatedSuccess = token => ({
+  type: ActionType.AUTHENTICATED,
+  payload: { token },
 });

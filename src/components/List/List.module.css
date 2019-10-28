@@ -1,11 +1,3 @@
-.listContainer {
-  padding: 0 5px;
-  margin: 0 5px;
-  background-color: rgb(240, 240, 240);
-  border: 1px solid #85dcbb;
-  border-radius: 5px;
-  font-family: "Open Sans";
-}
 .list {
   width: 90%;
   height: 380px;

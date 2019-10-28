@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import PropTypes from 'prop-types';
+import Cookies from 'js-cookie';
 import './styles.css';
 import Header from '../Header/Header';
 import Sort from '../Sort/Sort';
@@ -10,7 +10,11 @@ import Pagination from '../Pagination/Pagination';
 
 class App extends Component {
   componentDidMount() {
-    const { fetchList } = this.props;
+    const { fetchList, fetchAuthenticated } = this.props;
+
+    if (Cookies.get('authenticated')) {
+      fetchAuthenticated(Cookies.get('authenticated'));
+    }
     fetchList();
   }
 
@@ -18,12 +22,10 @@ class App extends Component {
     const {
       cards,
       authenticated,
-      // token,
-      // loadingCards,
-      // errorCards,
       errorLogin,
       tasksCount,
       fetchList,
+      modifyCard,
       logout,
       login,
     } = this.props;
@@ -36,16 +38,18 @@ class App extends Component {
           authenticated={authenticated}
         />
         <Sort fetchList={fetchList} />
-        {cards && <List listCards={cards} />}
-        <Pagination pageCount={+tasksCount} fetchList={fetchList} />
+        {cards && (
+          <List
+            listCards={cards}
+            authenticated={authenticated}
+            modifyCard={modifyCard}
+          />
+        )}
+        <Pagination pageCount={+tasksCount / 3} fetchList={fetchList} />
         <ToastContainer />
       </>
     );
   }
 }
-
-App.propTypes = {
-  fetchList: PropTypes.func.isRequired,
-};
 
 export default App;

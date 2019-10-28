@@ -18,7 +18,6 @@ const Pagionation = ({ fetchList, pageCount }) => {
       onPageChange={handlePageClick}
       containerClassName={styles.container}
       activeClassName={styles.active}
-      pageClassName={styles.disabled}
     />
   );
 };
