@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/todo_authorization/static/css/main.f2ae8de3.chunk.css",
+    "main.js": "/todo_authorization/static/js/main.c55d27b4.chunk.js",
+    "main.js.map": "/todo_authorization/static/js/main.c55d27b4.chunk.js.map",
+    "runtime-main.js": "/todo_authorization/static/js/runtime-main.f4ee71e2.js",
+    "runtime-main.js.map": "/todo_authorization/static/js/runtime-main.f4ee71e2.js.map",
+    "static/css/2.ced99b4c.chunk.css": "/todo_authorization/static/css/2.ced99b4c.chunk.css",
+    "static/js/2.74fdca49.chunk.js": "/todo_authorization/static/js/2.74fdca49.chunk.js",
+    "static/js/2.74fdca49.chunk.js.map": "/todo_authorization/static/js/2.74fdca49.chunk.js.map",
+    "index.html": "/todo_authorization/index.html",
+    "precache-manifest.332e39b6b057d70a362f0fbd83a2c617.js": "/todo_authorization/precache-manifest.332e39b6b057d70a362f0fbd83a2c617.js",
+    "service-worker.js": "/todo_authorization/service-worker.js",
+    "static/css/2.ced99b4c.chunk.css.map": "/todo_authorization/static/css/2.ced99b4c.chunk.css.map",
+    "static/css/main.f2ae8de3.chunk.css.map": "/todo_authorization/static/css/main.f2ae8de3.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f4ee71e2.js",
+    "static/css/2.ced99b4c.chunk.css",
+    "static/js/2.74fdca49.chunk.js",
+    "static/css/main.f2ae8de3.chunk.css",
+    "static/js/main.c55d27b4.chunk.js"
+  ]
+}
