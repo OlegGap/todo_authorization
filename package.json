@@ -5,7 +5,7 @@
   "homepage": "https://oleggap.github.io/todo_authorization/",
   "dependencies": {
     "@types/react": "^16.9.9",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.4.0",
     "eslint-plugin-import": "^2.18.2",
